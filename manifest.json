@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "Screen Area Capture",
+  "description": "This extension captures an area on the screen and sends it to the server along with a comment.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_popup": "templates/popup.html"
+  },
+  "background": {
+    "scripts":["js/background.js"]
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "<all_urls>"
+  ],
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "content_scripts":[
+    {
+      "matches":["*://*/*"],
+      "js":["js/jquery.min.js","js/popup.js"]
+    }
+  ]
+}

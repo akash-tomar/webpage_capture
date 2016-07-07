@@ -1,0 +1,10 @@
+canvas {
+	z-index:-1;
+}
+
+#drag_resize {
+	width: 150px; 
+	height: 150px;
+	border:1px solid black;
+}
+
